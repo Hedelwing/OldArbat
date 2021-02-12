@@ -12,11 +12,11 @@ export const cutString = (text, maxLetters = 90) => {
 }
 
 export function timeFormat(date) {
-  return (new Date(date)).toLocaleTimeString('ru-RU', { hour: '2-digit', minute: '2-digit' })
+  return (new Date(date)).toLocaleTimeString('ru-RU', { timeZone: 'Europe/Moscow', hour: '2-digit', minute: '2-digit' })
 }
 
 export function dateFormat(date) {
-  return (new Date(date)).toLocaleDateString('ru-RU', { day: '2-digit', month: '2-digit', year: 'numeric' })
+  return (new Date(date)).toLocaleDateString('ru-RU', { timeZone: 'Europe/Moscow', day: '2-digit', month: '2-digit', year: 'numeric' })
 }
 
 
