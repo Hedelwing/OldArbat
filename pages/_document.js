@@ -37,10 +37,12 @@ export default class MyDocument extends Document {
             <Html lang="ru">
                 <Head>
                     <link rel="preconnect" href="https://fonts.gstatic.com" />
+                    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
                     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald:wght@400;700&display=swap" rel="stylesheet" type="text/css" />
                     {process.env.NODE_ENV === 'production' && <>
                         <script async src="https://www.googletagmanager.com/gtag/js?id=G-LRVR9S287E" />
                         <script
+                            type="text/javascript"
                             dangerouslySetInnerHTML={{
                                 __html: `
                             window.dataLayer = window.dataLayer || [];
@@ -50,6 +52,21 @@ export default class MyDocument extends Document {
                             gtag('config', 'G-LRVR9S287E');
                         `
                             }}
+                        />
+                        <script
+                            type="text/javascript"
+                            dangerouslySetInnerHTML={{
+                                __html: `
+                                (function(m,e,t,r,i,k,a){m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+                                m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+                                (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+                             
+                                ym(72061618, "init", {
+                                    clickmap:true,
+                                    trackLinks:true,
+                                    accurateTrackBounce:true
+                                });
+                                `}}
                         />
                     </>}
                 </Head>

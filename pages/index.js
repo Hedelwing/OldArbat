@@ -43,7 +43,6 @@ export default function Home({ homepage: { meta, title, text, galery }, poster, 
     <Head>
       <title>{title}</title>
       <link rel="canonical" href={canonical} />
-      <link rel="icon" href={`${canonical}favicon.ico`} type="image/x-icon" />
       {meta?.map((meta, key) => <meta key={key} {...meta} />)}
     </Head>
 

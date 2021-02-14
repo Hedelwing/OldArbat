@@ -74,7 +74,7 @@ export default function MobileMenu({ menuLinks }) {
           <Box p={1} display="flex" alignItems="center" mb={1}>
             <Call />
             <Box ml={1}>
-              <Link color="textPrimary" href="tel:+74956911546">
+              <Link color="primary" href="tel:+74956911546">
                 +7 (495) 691-15-46
               </Link>
             </Box>
