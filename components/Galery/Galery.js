@@ -38,6 +38,7 @@ export default function Galery({ images }) {
                     slidesPerView: 3,
                 }
             }}
+            spaceBetween={8}
         >
             {images.map(({ thumbnail }, i) => (
                 <SwiperSlide key={i}>

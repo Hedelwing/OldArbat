@@ -4,12 +4,6 @@ export default makeStyles(theme => ({
   "@global": {
     ".swiper-button-prev, .swiper-button-next": {
       color: '#fafafa'
-    },
-    ".swiper-slide": {
-      paddingLeft: theme.spacing(.5),
-      paddingRight: theme.spacing(.5),
-      margingLeft: theme.spacing(-0.5),
-      boxSizing: "border-box"
     }
   },
   img: {

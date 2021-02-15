@@ -6,10 +6,6 @@ import {
 import Link from 'next/link'
 
 const useStyles = makeStyles(theme => ({
-    link: {
-        textDecoration: "none",
-        color: theme.palette.text,
-    },
     card: {
         display: 'block',
         textDecoration: 'none',
@@ -26,11 +22,7 @@ const useStyles = makeStyles(theme => ({
 export default props => {
     const { link, card } = useStyles()
 
-    return <Link
-        className={link}
-        {...props}
-        passHref
-    >
+    return <Link {...props} passHref>
         <Card className={card} component='a'>
             {props.children}
         </Card>

@@ -1,7 +1,8 @@
 import React from "react"
-import { Grid, Box } from "@material-ui/core"
+import { Grid, Box, IconButton, Card, Typography } from "@material-ui/core"
 import { Layot, PlayCard, SEO } from "../../components"
 import { playsQuery, initApollo } from "../../apollo"
+import { FilterList } from '@material-ui/icons'
 
 export default function Plays({ plays, url }) {
   return <Layot current="Репертуар" navItems={[{ name: "Главная", link: "/" }]}>
@@ -10,6 +11,18 @@ export default function Plays({ plays, url }) {
       description="Репертуар театрального дома «Старый Арбат». От всем известного «Фигаро» до авторских спектаклей"
       url={url}
     />
+    <Box pb={3} display="flex" justifyContent='space-between' alignItems="center">
+      <Box>
+        <Card>
+          <Typography variant="caption"></Typography>
+        </Card>
+      </Box>
+      <Box>
+        <IconButton>
+          <FilterList />
+        </IconButton>
+      </Box>
+    </Box>
     <Box display="flex">
       <Grid spacing={2} container>
         {plays?.map(play =>
