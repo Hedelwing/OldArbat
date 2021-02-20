@@ -38,22 +38,10 @@ export default class MyDocument extends Document {
                 <Head>
                     <link rel="icon" type="image/png" href="favicon.png" />
                     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+                    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
                     <link rel="preconnect" href="https://fonts.gstatic.com" />
                     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald:wght@400;700&display=swap" rel="stylesheet" type="text/css" />
                     {process.env.NODE_ENV === 'production' && <>
-                        <script async src="https://www.googletagmanager.com/gtag/js?id=G-LRVR9S287E" />
-                        <script
-                            type="text/javascript"
-                            dangerouslySetInnerHTML={{
-                                __html: `
-                            window.dataLayer = window.dataLayer || [];
-                            function gtag(){dataLayer.push(arguments);}
-                            gtag('js', new Date());
-
-                            gtag('config', 'G-LRVR9S287E');
-                        `
-                            }}
-                        />
                         <script
                             type="text/javascript"
                             dangerouslySetInnerHTML={{
@@ -70,6 +58,11 @@ export default class MyDocument extends Document {
                                 `
                             }}
                         />
+                        <noscript>
+                            <div>
+                                <img src="https://mc.yandex.ru/watch/72061618" style="position:absolute; left:-9999px;" alt="" />
+                            </div>
+                        </noscript>
                     </>}
                 </Head>
                 <body>
