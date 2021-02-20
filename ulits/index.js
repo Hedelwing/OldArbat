@@ -110,5 +110,5 @@ export const contactsJsonLD = {
   },
   telephone: "+7 (495) 691-15-46",
   name: "Театр-студия «Старый Арбат»",
-  url: process.env.THEATR
+  url: process.env.THEATER
 }
