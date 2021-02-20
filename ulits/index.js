@@ -72,10 +72,10 @@ export const formatPoster = ({
   price
 })
 
-export const createPosterJsonLD = ({ name, url, slug, startDate, description, price, address }) => ({
+export const createPosterJsonLD = ({ title, url, slug, startDate, description, price, adress }) => ({
   "@context": "https://schema.org/",
   "@type": "Event",
-  name,
+  name: title,
   url: slug,
   startDate: yyyymmdd(startDate),
   image: url,
@@ -93,7 +93,7 @@ export const createPosterJsonLD = ({ name, url, slug, startDate, description, pr
     "@type": "Place",
     url: process.env.THEATER,
     name: "Театр-студия «Старый Арбат»",
-    address
+    address: adress
   }
 })
 
