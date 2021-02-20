@@ -41,7 +41,7 @@ export default class MyDocument extends Document {
                     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
                     <link rel="preconnect" href="https://fonts.gstatic.com" />
                     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald:wght@400;700&display=swap" rel="stylesheet" type="text/css" />
-                    {process.env.NODE_ENV === 'production' && <>
+                    {process.env.NODE_ENV === 'production' &&
                         <script
                             type="text/javascript"
                             dangerouslySetInnerHTML={{
@@ -58,12 +58,7 @@ export default class MyDocument extends Document {
                                 `
                             }}
                         />
-                        <noscript>
-                            <div>
-                                <img src="https://mc.yandex.ru/watch/72061618" style="position:absolute; left:-9999px;" alt="" />
-                            </div>
-                        </noscript>
-                    </>}
+                    }
                 </Head>
                 <body>
                     <Main />
