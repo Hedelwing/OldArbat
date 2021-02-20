@@ -36,8 +36,8 @@ export default class MyDocument extends Document {
         return (
             <Html lang="ru">
                 <Head>
-                    <link rel="icon" type="image/png" href="favicon.png" />
-                    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+                    <link rel="icon" type="image/png" href="/favicon.png" />
+                    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
                     <link rel="preconnect" href="https://fonts.gstatic.com" />
                     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald:wght@400;700&display=swap" rel="stylesheet" type="text/css" />
                     {process.env.NODE_ENV === 'production' &&
