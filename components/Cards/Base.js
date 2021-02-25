@@ -16,11 +16,10 @@ const useStyles = makeStyles(theme => ({
             boxShadow: theme.shadows[12],
         }
     }
-
 }))
 
-export default props => {
-    const { link, card } = useStyles()
+const Base = props => {
+    const { card } = useStyles()
 
     return <Link {...props} passHref>
         <Card className={card} component='a'>
@@ -29,3 +28,4 @@ export default props => {
     </Link>
 }
 
+export default Base

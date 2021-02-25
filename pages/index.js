@@ -36,7 +36,7 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
-export default function Home({ homepage: { meta, title, text, galery }, poster, canonical }) {
+export default function Home({ homepage: { meta, title, text, galery }, posters, canonical }) {
   const { hero, heroTitle, titleBackdrop } = useStyles()
 
   return <>
@@ -47,13 +47,19 @@ export default function Home({ homepage: { meta, title, text, galery }, poster, 
     </Head>
 
     <Box pb={2} position="relative" className={hero}>
+
       <Box className={titleBackdrop}>
+
         <Container maxWidth="lg">
+
           <Typography className={heroTitle} variant="h3" component="h1">
             {title}
           </Typography>
+          
         </Container>
+
       </Box>
+
     </Box>
 
 
@@ -64,13 +70,13 @@ export default function Home({ homepage: { meta, title, text, galery }, poster, 
         </Box>
 
         <Box maxWidth={960} minHeight={160} display="flex" justifyContent="center" alignItems="center" mx="auto">
-          {poster ?
-            <PosterCard
-              {...poster}
-              href={poster.slug}
-            />
-            : <Typography variant="subtitle2" color="textSecondary">
-              Нет ближайших событий
+          {posters.map((poster, i) => <PosterCard
+            key={i}
+            {...poster}
+            href={poster.slug}
+          />)}
+          {posters.length === 0 && < Typography variant="subtitle2" color="textSecondary">
+            Нет ближайших событий
               </Typography>
           }
         </Box>
@@ -86,17 +92,18 @@ export default function Home({ homepage: { meta, title, text, galery }, poster, 
         <ReactMarkdown renderers={renderers}>
           {text}
         </ReactMarkdown>
-        
+
       </Box>
 
-      {
-        galery && <Box pt={6} pb={3}>
-          <Box textAlign="center" pb={4}>
-            <SpecialTitle title='Галерея' />
-          </Box>
-          <Galery images={galery} autoplay />
+      {galery && <Box pt={6} pb={3}>
+
+        <Box textAlign="center" pb={4}>
+          <SpecialTitle title='Галерея' />
         </Box>
-      }
+
+        <Galery images={galery} autoplay />
+
+      </Box>}
 
     </Container>
   </>
@@ -116,8 +123,7 @@ export async function getStaticProps(ctx) {
     notFound: true
   }
 
-  const poster = data.posters[0]
-  const formattedPoster = poster && formatPoster(poster)
+  const posters = data.posters.map(poster => formatPoster(poster))
 
   const galery = data.homepage.galery.map(image => ({
     url: image.url,
@@ -129,7 +135,7 @@ export async function getStaticProps(ctx) {
   return {
     props: {
       homepage,
-      poster: formattedPoster,
+      posters,
       canonical: process.env.THEATER
     },
   }
