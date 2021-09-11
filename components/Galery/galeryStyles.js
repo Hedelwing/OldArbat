@@ -4,6 +4,10 @@ export default makeStyles(theme => ({
   "@global": {
     ".swiper-button-prev, .swiper-button-next": {
       color: '#fafafa'
+    },
+    ".swiper-container": {
+      overflow: 'hidden',
+      position: 'relative'
     }
   },
   img: {
@@ -15,4 +19,5 @@ export default makeStyles(theme => ({
       height: 320,
     }
   },
+
 }))

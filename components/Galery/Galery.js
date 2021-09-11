@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react"
 import Head from "next/head"
 import Lightbox from "react-image-lightbox"
 import useStyles from "./galeryStyles"
+import 'swiper/swiper-bundle.min.css'
 
 SwiperCore.use([Navigation, Autoplay, Lazy, A11y])
 
@@ -16,10 +17,6 @@ export default function Galery({ images }) {
 
     return <>
         <Head>
-            <link rel="stylesheet" type="text/css" href="https://unpkg.com/swiper/swiper.min.css" />
-            <link rel="stylesheet" type="text/css" href="https://unpkg.com/swiper/components/a11y/a11y.min.css" />
-            <link rel="stylesheet" type="text/css" href="https://unpkg.com/swiper/components/lazy/lazy.min.css" />
-            <link rel="stylesheet" type="text/css" href="https://unpkg.com/swiper/components/navigation/navigation.min.css" />
             <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@zhyabs1314/react-image-lightbox@5.0.8/style.css" />
         </Head>
 
