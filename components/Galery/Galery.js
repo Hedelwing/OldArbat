@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react"
 import Head from "next/head"
 import Lightbox from "react-image-lightbox"
 import useStyles from "./galeryStyles"
-import 'swiper/swiper-bundle.min.css'
+import 'swiper/css';
 
 SwiperCore.use([Navigation, Autoplay, Lazy, A11y])
 
