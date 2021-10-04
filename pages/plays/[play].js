@@ -115,7 +115,7 @@ export default function Play({ play, url }) {
         <Typography>
           Не забывайте подписываться на наш <Link style={{ fontWeight: 'bold' }} color="primary" href="https://www.instagram.com/teatr_staryj_arbat/" target="_blank" rel="noopener">Инстраграм</Link> и
           группу <Link style={{ fontWeight: 'bold' }} color="primary" href="https://vk.com/staryjarbat" target="_blank" rel="noopener">ВКонтакте</Link>. Всё
-          амое интересное вы найдете именно там.
+          cамое интересное вы найдете именно там.
         </Typography>
       </Box>
     </Box>
