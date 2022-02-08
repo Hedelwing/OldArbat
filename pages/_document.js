@@ -40,6 +40,7 @@ export default class MyDocument extends Document {
                     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
                     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
                     <link rel="preconnect" href="https://fonts.gstatic.com" />
+                    <meta name="yandex-verification" content="f7c5790fa8fe9e77" />
                     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald:wght@400;700&display=swap" rel="stylesheet" type="text/css" />
                     {process.env.NODE_ENV === 'production' &&
                         <script
