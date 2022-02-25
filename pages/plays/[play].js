@@ -113,7 +113,7 @@ export default function Play({ play, url }) {
     <Box pb={3}>
       <Box className={styles.footnote}>
         <Typography>
-          Не забывайте подписываться на наш <Link style={{ fontWeight: 'bold' }} color="primary" href="https://www.instagram.com/teatr_staryj_arbat/" target="_blank" rel="noopener">Инстраграм</Link> и
+          Не забывайте подписываться на наш <Link style={{ fontWeight: 'bold' }} color="primary" href="https://www.instagram.com/teatr_staryj_arbat/" target="_blank" rel="noopener">Instagram</Link> и
           группу <Link style={{ fontWeight: 'bold' }} color="primary" href="https://vk.com/staryjarbat" target="_blank" rel="noopener">ВКонтакте</Link>. Всё
           cамое интересное вы найдете именно там.
         </Typography>
