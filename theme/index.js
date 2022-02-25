@@ -9,29 +9,16 @@ let theme = createTheme({
     },
     typography: {
         htmlFontSize: 12.5,
-        fontFamily: "Montserrat",
+        fontFamily: "Mulish",
     },
     overrides: {
         MuiTypography: {
             gutterBottom: {
                 marginBottom: 20,
             },
-            h3: {
-                fontFamily: "Oswald",
-            },
-            h4: {
-                fontFamily: "Oswald",
-            },
             h5: {
-                fontFamily: "Oswald",
                 textTransform: 'uppercase'
             },
-            h6: {
-                fontFamily: "Oswald",
-            },
-            button: {
-                fontFamily: "Oswald",
-            }
         },
         MuiContainer: {
             root: {
