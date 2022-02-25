@@ -12,7 +12,7 @@ module.exports = {
         return config;
     },
     env: {
-        THEATER: 'https://staryiarbat.ru/',
+        THEATER: 'https://starjiarbat.ru/',
         API: 'https://stariyarbat.herokuapp.com/graphql'
     }
 };
